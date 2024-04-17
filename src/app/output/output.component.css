@@ -1,0 +1,57 @@
+/* Output card styling */
+mat-card {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+/* Card title styles */
+mat-card-title {
+  font-size: 2rem;
+  color: #009688;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Label styling */
+.output-label {
+  font-size: 1.1rem;
+  color: #424242;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Value styling */
+.output-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #212121;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Link button to go back */
+a[mat-raised-button] {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #009688;
+  color: white;
+}
+
+a[mat-raised-button]:hover {
+  background-color: #00796b;
+  box-shadow: 0 2px 2px #00695c;
+}
+
+/* Ensure the button fits within smaller screens */
+@media (max-width: 768px) {
+  a[mat-raised-button] {
+    padding: 0.5rem 1rem;
+  }
+}

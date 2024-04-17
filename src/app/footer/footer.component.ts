@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+  public currentDateTime: Date;
 
+  constructor() {
+    this.currentDateTime = new Date();
+  }
+
+  ngOnInit(): void {
+    // Update the date and time every second.
+    setInterval(() => {
+      this.currentDateTime = new Date();
+    }, 1000);
+  }
 }

@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: deepskyblue;
+  color: #333;
+}
+
+/* Card Styling */
+mat-card {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: lavender;
+}
+
+mat-card-title {
+  text-align: center;
+  color: #5c6bc0; /* Indigo color for the title */
+  margin-bottom: 1rem;
+}
+
+/* Input Field Styling */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input.mat-input-element {
+  color: #333; /* Darker text for better visibility */
+}
+
+/* Enhance the radio buttons */
+mat-radio-group {
+  margin-bottom: 1rem;
+}
+
+.mat-radio-button {
+  margin-right: 1rem;
+}
+
+/* Style the slide toggle */
+mat-slide-toggle {
+  margin-bottom: 1rem;
+}
+
+.mat-slide-toggle-content {
+  color: #333; /* Dark text for the label */
+}
+
+.mat-accent .mat-slide-toggle-thumb {
+  background-color: #5c6bc0; /* Indigo thumb */
+}
+
+.mat-accent .mat-slide-toggle-bar {
+  background-color: brown; /* Light indigo track */
+}
+
+/* Button Styling */
+button.mat-raised-button {
+  width: 100%;
+  background-color: #5c6bc0; /* Indigo button */
+  color: pink;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  box-shadow: none; /* Remove default shadow for a flat style */
+  border-radius: 0.25rem;
+  transition: box-shadow 0.3s ease;
+}
+
+button.mat-raised-button:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 0 1px rgba(0, 0, 0, 0.19);
+}

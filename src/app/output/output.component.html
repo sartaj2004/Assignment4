@@ -1,1 +1,22 @@
-<p>output works!</p>
+<mat-card>
+  <mat-card-title>{{ title }}</mat-card-title>
+  <p>
+    <label class="output-label">Cost of Service:</label>
+    <span class="output-value">${{ costOfService | number:'1.2-2' }}</span>
+  </p>
+  <p>
+    <label class="output-label">Service Quality:</label>
+    <span class="output-value">{{ serviceQuality }}%</span>
+  </p>
+  <p>
+    <label class="output-label">Tip:</label>
+    <span class="output-value">${{ tip | number:'1.2-2' }}</span>
+  </p>
+  <p>
+    <label class="output-label">Total Bill:</label>
+    <span class="output-value">${{ totalBill | number:'1.2-2' }}</span>
+  </p>
+  <p>
+    <a mat-raised-button routerLink="/input">Back to Input</a>
+  </p>
+</mat-card>

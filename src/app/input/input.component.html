@@ -1,1 +1,32 @@
-<p>input works!</p>
+<mat-card>
+  <mat-card-title>{{ title }}</mat-card-title>
+  <form [formGroup]="form" (ngSubmit)="calculateAndNavigate()">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Cost of Service</mat-label>
+        <input matInput formControlName="costOfService" type="number" min="0">
+        <mat-error *ngIf="form.get('costOfService')?.errors?.['required']">
+          Cost of service is required.
+        </mat-error>
+        <mat-error *ngIf="form.get('costOfService')?.errors?.['min']">
+          Must be at least 0.
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-label>Service Quality</mat-label>
+      <mat-radio-group formControlName="serviceQuality">
+        <mat-radio-button value="0.15">Okay - 15%</mat-radio-button>
+        <mat-radio-button value="0.18">Good - 18%</mat-radio-button>
+        <mat-radio-button value="0.20">Excellent - 20%</mat-radio-button>
+      </mat-radio-group>
+    </p>
+    <p>
+      <mat-slide-toggle formControlName="roundUpTip">Round Up Tip</mat-slide-toggle>
+    </p>
+
+    <p>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Calculate</button>
+    </p>
+  </form>
+</mat-card>
